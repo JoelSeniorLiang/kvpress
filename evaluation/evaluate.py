@@ -37,6 +37,7 @@ from kvpress import (
     QFilterPress,
     PyramidKVPress,
     FinchPress,
+    LagKVPress,
 )
 
 logger = logging.getLogger(__name__)
@@ -84,6 +85,8 @@ PRESS_DICT = {
     "snap_think": ComposedPress([SnapKVPress(), ThinKPress()]),
     "pyramidkv": PyramidKVPress(),
     "finch": FinchPress(),
+    "ladkv": LagKVPress(),
+    "adalagkv": AdaKVPress(LagKVPress(cross_scoring=True)),
 }
 
 
